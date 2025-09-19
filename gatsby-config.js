@@ -10,7 +10,7 @@ module.exports = {
       options: {
         url: `https://www.deligence.com/graphql`,
         schema: {
-      timeout: 200000,   
+      timeout: 2000000,   
     },
       },
     },
