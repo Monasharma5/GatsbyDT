@@ -1,0 +1,14 @@
+[build]
+  command = "gatsby build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "20"
+  GATSBY_EXPERIMENTAL_IMAGE_CDN = "false"
+  GATSBY_CONCURRENT_DOWNLOAD = "20"
+
+[plugins]
+  package = "@netlify/plugin-gatsby"
+
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
