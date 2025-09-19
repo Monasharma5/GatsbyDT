@@ -10,7 +10,7 @@ module.exports = {
       options: {
         url: `https://www.deligence.com/graphql`,
         schema: {
-      timeout: 150000,   
+      timeout: 200000,   
     },
       },
     },
@@ -18,4 +18,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],
+  flags: {
+  IMAGE_CDN: true,
+}
 }
