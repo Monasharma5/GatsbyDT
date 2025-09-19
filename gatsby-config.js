@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Deligence`,
     description: `Deligence site powered by WordPress and Gatsby`,
-    author: `Deligence Team`, // 👈 add this line
+    author: `Deligence Team`,
   },
   plugins: [
     {
@@ -10,15 +10,21 @@ module.exports = {
       options: {
         url: `https://www.deligence.com/graphql`,
         schema: {
-      timeout: 2000000,   
-    },
+          timeout: 300000,
+          perPage: 20,
+        },
+        type: {
+          MediaItem: {
+            excludeFieldNames: ["localFile"], // 🚀 disable downloading images/videos
+          },
+        },
+        develop: {
+          hardCacheMediaFiles: true,
+        },
+        production: {
+          hardCacheMediaFiles: true,
+        },
       },
     },
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
   ],
-  flags: {
-  IMAGE_CDN: true,
-}
 }
