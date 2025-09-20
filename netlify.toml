@@ -1,10 +1,9 @@
 [build]
-  command = "gatsby build"
+  command = "GATSBY_EXPERIMENTAL_IMAGE_CDN=false gatsby build"
   publish = "public"
 
 [build.environment]
   NODE_VERSION = "20"
-  GATSBY_EXPERIMENTAL_IMAGE_CDN = "false"
   GATSBY_CONCURRENT_DOWNLOAD = "20"
 
 [[plugins]]
