@@ -7,7 +7,7 @@
   GATSBY_EXPERIMENTAL_IMAGE_CDN = "false"
   GATSBY_CONCURRENT_DOWNLOAD = "20"
 
-[plugins]
+[[plugins]]
   package = "@netlify/plugin-gatsby"
 
 [[plugins]]
